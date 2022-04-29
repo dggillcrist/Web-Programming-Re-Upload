@@ -1,0 +1,120 @@
+const fs = require('fs'); // import file system
+
+exports.plans=[];
+
+let readfile = function()
+{
+    fs.readFile('plans.json', 'utf8', (err, jsonString) => 
+    {
+        if(err) 
+        {
+            console.log('ERROR: FILE COULD NOT BE READ');
+        }
+        else 
+        {
+            exports.plans = JSON.parse(jsonString);
+            //console.log(exports.plans); 
+        }
+    });
+}
+
+let writefile = function()
+{
+    fs.writeFile('plans.json', JSON.stringify(exports.plans), (err) => 
+    {
+        if(err) 
+        {
+            //console.log('ERROR: FILE COULD NOT BE READ');
+        }
+      
+    });
+}
+readfile();
+exports.read = function(id)
+{ 
+    readfile();
+    let index = pos(id);
+    if(index>=0)
+    { 
+        return exports.plans[index]; 
+    }
+    else
+    {
+        return null;
+
+    }
+}
+
+exports.readAll = function()
+{ 
+    readfile();
+    return exports.plans; 
+}
+exports.create = function(newPlan)
+{
+    readfile();
+    if(exports.plans.length===0) 
+    {
+        newPlan.txt_id = 1; 
+    }
+    else
+    { 
+        let intId = parseInt(exports.plans[exports.plans.length-1].txt_id);
+        newPlan.txt_id += (intId+1); 
+    }
+    exports.plans.push(newPlan); 
+    writefile();
+}
+function pos(id)
+{
+    readfile();
+    for(let i=0; i< exports.plans.length; i++)
+    {
+        if(exports.plans[i].txt_id == id)
+        { 
+            return i; 
+        }
+        
+    }   
+    writefile();
+    return -1;
+    
+}
+
+
+exports.del = function(id)
+{
+    readfile();
+    let index = pos(id);
+    let plan = null; 
+    //console.log("did this work",index);
+    if(index>=0)
+    { 
+        //console.log("this did work",index);
+        plan = exports.plans[index]; 
+        exports.plans.splice(index,1);
+        writefile();
+
+    }
+    
+    //console.log("this did not work",index);
+    //writefile();
+    return plan;  
+}
+exports.update = function(newPlan)
+{
+        readfile();
+        let index = pos(newPlan.txt_id);
+        
+        console.log("did this work?",index);
+        if(index>=0)
+        {
+            console.log("this did work",index);
+            exports.plans[index] = newPlan;
+        }
+
+        writefile();
+
+
+}
+  

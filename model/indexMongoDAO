@@ -1,0 +1,59 @@
+const mongoose = require('mongoose');
+
+const fs = require('fs'); // import file system
+
+//exports.plans=[];
+
+const planSchema = new mongoose.Schema(
+{
+    txt_name: String,
+    mile: String,
+    hundred: String,
+    maxDL: String,
+    pushups: String,
+    timeline: String,
+    caloricGoal: String
+});
+
+const planModel = mongoose.model('plan', planSchema);
+
+exports.readAll = async function()
+{
+    let plans = await planModel.find();
+
+    return plans;
+}
+
+exports.read = async function(id)
+{
+    let plan = await planModel.findById(id);
+
+    return plan;
+}
+
+exports.create = async function(newPlan)
+{
+    const plan = new planModel(newPlan);
+    await plan.save();
+    
+    return plan;
+}
+
+exports.del = async function(id)
+{
+    let delPlan = await planModel.findByIdAndDelete(id);
+    return delPlan;
+} 
+
+exports.deleteAll = async function()
+{
+    await planModel.deleteMany();
+} 
+
+exports.update = async function(plan)
+{
+    let id = plan._id;
+    let updatedPlan = await planModel.findByIdAndUpdate(id, plan);
+
+    return updatedPlan;
+}

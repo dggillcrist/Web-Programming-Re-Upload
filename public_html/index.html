@@ -1,0 +1,376 @@
+<html>
+    <head>
+    <meta harset="utf-8"> <!-- charset --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- viewport --> 
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"> <!-- Bootstrap CSS --> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS --> 
+    </head>
+
+    <body>
+
+    <nav class="navbar navbar-expand-sm " style = "background-color: gray;";"">
+        <div class="container-fluid "> 
+            <ul class="navbar-nav">
+            <li class="nav-item"> 
+                <a href="#" class="nav-link" style="color: black;"> Home </a> </li>
+            <li class="nav-item"> 
+                <a href="#" class="nav-link" style = "color: black;"> Sign Up </a> </li>
+            <li class="nav-item"> 
+                <a href="#" class="nav-link" style="color: black;"> Gallery </a> </li>
+            </ul>
+        </div>
+        </nav>
+          
+
+    <header class="mt-1 p-3 text-center" style= background-color:#be9d0a; border-style: groove; border-color: rgb(29, 28, 28); border-width: 0.75cm;>
+        <div class= "container-fluid" >
+           <h1 style="font-family:stencil "> Ranger Tough</h1>
+           <p>Army Ranger Inspired Workout Plan</p> 
+        
+    </header>
+
+    <div class="container-fluid text-center mt-1 " style="background-color: black; border-style: groove; border-color: #be9d0a; border-width: 0.5cm; ">
+    <h2 style="color: #be9d0a; font-family:stencil "> 
+        Will You Lead The Way?
+    </h2>
+
+    </div>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <div class=" col mt-2 text-center">
+                <h3>
+                    Who are the Army Rangers?
+                </h3>
+                    <p>
+                        The 75th Ranger Regiment is an elite group of soldiers specializing in raids and assault missions.
+                        The Army Rangers operate at maximum physical performance with Regiment sstandards surpassing those
+                        of nearly all other Army units. The Army Rangers fall under the United States Special Operations Command
+                        as Tier 2 soldiers making them some of the most elite and highly trained soldiers in the world. In order
+                        to become an Army Ranger, one must pass a series of physical and psychological examinations as well as 
+                        surviving intensive and grueling training.
+
+                        Are you ready?
+                    </p>
+
+            </div>
+            <div class="col mt-2 text-center">
+                <h3>
+                    Workout Plan
+                </h3>
+                    <p class="text">
+                        Often times, those aspiring to get in the best shape of their lives have the motiavtion to hit 
+                        the gym but don't have the knowledge. A solution to this problem would be a plan with no decisions.
+                        By inputting your personal information including height, weight, age, and specified fitness scores, 
+                        this workout program will lay out a personalized fitness plan in order to maximize your performance, 
+                        increase physical rigor and prepare you for whatever the future may hold.<span class="moreText">The Train Like A Ranger
+                        fitness plan is designed using an individuals scores from the Army Physical Fitness Test (APFT).
+                        The APFT consists of 2 minutes of push-ups, followed by 2 minutes of sit-ups, and finally concluding with
+                        a 2 mile run. The Army has, however, left this fitness test behind for a more comprehensive fitness
+                        test known as the Army Combat Fitness Test (ACFT). Despite the ACFT being more in depth and using more
+                        relevant exercises in showing a soldier's fitness capabilities, we use the APFT as a diagnostic due to
+                        its simplicity, ease of set-up, and versatility. This program will be oriented around ACFT events so that 
+                        current soldiers are able to improve their scores and increase the likelihood of getting an opportunity
+                        to become a ranger!</span>
+                    </p>
+                    <button class="readMoreButton" style=" background-color: #4b5320; font-family: stencil; border-style: groove; border-color: #4b5320; border-width: 0.5cm; "> Read More </button>
+
+                    <button style=" background-color: #4b5320; font-family: stencil; border-style: groove; border-color: #4b5320; border-width: 0.5cm; "data-bs-toggle="modal" data-bs-target="#FitnessInfoModal"> Enter Your Fitness Info </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid   ">
+        <div class="row">
+            <div class="col mt-2 text-center">
+                
+                <div class = "wrapper">
+                    <img class="img-fluid" src="img/ranger-reg.jpg" alt="">
+                </div>
+
+                <div class=" col mt-2 text-center">
+                
+                    <div class = "wrapper">
+                        <img class="img-fluid" " src="img/ruck.jpg" alt="">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="rest"> 
+            
+        </div>
+      </div>
+
+  
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 col-md-4">
+          </div>
+          <div class="col">
+            <a href="#MainForm" onclick='insertForm();' class="btn btn-primary pe-2 ps-2" data-bs-toggle="modal" data-bs-target="#ModalForm"> 
+              <span class="bi-plus-square-fill"></span> 
+              Add New Plan 
+            </a>
+          </div>
+        </div>
+      </div>
+    
+    <div class="container-fluid text-center mt-1 " style="background-color: black; border-style: groove; border-color: #be9d0a; border-width: 0.5cm; ">
+        <h2 style="color: #be9d0a; font-family:stencil "> 
+            Train Like A Ranger Today!
+        </h2>
+
+
+
+
+    </div>
+
+    
+    
+    <div class="modal" id="FitnessInfoModal" style="color: #4b5320;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h4 style="font-family:stencil" class="modal-title text-center">Fitness Information</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                
+                <form>
+                    <div class="modal-body">
+                        <div class="container-fluid" style="color: #4b5320">
+                        <div class="form-group p-2">
+                            <label for = "runTime" style="font-family: stencil" = "col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">2 Mile Run Time: </label>
+                            <input placeholder="--:--" type ="text" id="runTime" name="runTime">
+                        </div>
+                        <div class="form-group p-2">
+                            <label for = "pushups" style="font-family: stencil" = "col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">2-min Pushups: </label>
+                            <input placeholder="0" type ="number" id="pushup" name="pushup">
+                        </div>
+                        <div class="form-group p-2">
+                            <label for = "situps" style="font-family: stencil" = "col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">Situps: </label>
+                            <input placeholder="0" type ="number" id="situps" name="situps">
+                        </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Save</button>
+                        <button type="reset" class="btn btn-warning" >Clear</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The Modal -->
+  <div class="modal" id="ModalForm">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" id="ModalTitle">Workout Plans</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        
+        <form class="was-validated" method="post" action="/plan">
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container" id="MainForm">
+              
+              <div class="row mb-2" id="div_form_id" style="display:flex;">
+                <label class="col-form-label col-md-3" for="_id"> ID: </label>
+                <div class="col-12 col-md">
+                  <input class="form-control" type="text" name="_id" id="_id" autocomplete="off" readonly />
+                </div>
+              </div> 
+              <div class="row mb-2">
+                <label class="col-form-label col-md-3" for="txt_name"> Name: </label>
+                <div class="col-12 col-md">
+                  <input class="form-control" type="text" name="txt_name" id="txt_name" required />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <label class="col-form-label col-md-3" for="mile"> Mile Time: </label>
+                <div class="col-12 col-md">
+                  <input class="form-control" type="text" name="mile" id="mile" required />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <label class="col-form-label col-md-3" for="hundred"> 100m Time: </label>
+                <div class="col-12 col-md">
+                  <input class="form-control" type="text" name="hundred" id="hundred" required />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <label class="col-form-label col-md-3" for="maxDL"> Max Deadlift: </label>
+                <div class="col-12 col-md">
+                  <input class="form-control" type ="text" name="maxDL" id="maxDL" required />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <label class="col-form-label col-md-3" for="pushups"> 2-min Push-ups: </label>
+                <div class="col-12 col-md">
+                  <input class="form-control" type="text" name="pushups" id="pushups" required />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <label class="col-form-label col-md-3" for="timeline"> Timeline(weeks): </label>
+                <div class="col-12 col-md">
+                  <input class="form-control" type="text" name="timeline" id="timeline" required />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <label class="col-form-label col-md-3" for="caloricGoal"> Caloric Goal: </label>
+                <div class="col-12 col-md">
+                  <input class="form-control" type="text" name="caloricGoal" id="caloricGoal" required />
+                </div>
+              </div>
+
+            </div>  
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success me-2"> Save </button>
+            <button type="reset" class="btn btn-warning me-2" id="clear_button"> Clear </button>
+            <button type="button" class="btn btn-danger me-2" data-bs-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-5 p-4 bg-dark text-white text-center">
+    <p>Daniel Gillcrist Web Programming</p>
+  </div>
+
+
+
+  
+    <script>
+
+    function conf()
+    {
+      return window.confirm('Are you sure you want to delete?');
+    }
+    
+        let plans = [{_id:0, name:'test'}];
+    
+        /*** main function to ask the server for plan data
+            and display it in this web page.
+            */
+        async function getPlans()
+        { 
+          let response = await fetch('http://localhost:4000/plan');
+          //If this page is running on the same server, then just fetch('/plan') would also work
+    
+          plans = await response.json();
+          
+          let out = `
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                
+                <th>  </th>
+                <th> ID </th>
+                <th> Name </th>
+                <th> Mile Pace </th>
+                <th> 100m Pace </th>
+                <th> MaxDL </th>
+                <th> Pushups </th>
+                <th> Timeline </th>
+                <th> Caloric Goal </th>
+              </tr>
+            </thead>
+            <tbody>`;
+              for(let i=0; i<plans.length; i++)
+              {
+                out += `
+                <tr>
+                  
+                  <td> <a href="/delPlan/${plans[i]._id}" onclick="return conf();"><span class="text-danger bi-x-circle-fill"></span></a> &nbsp;
+                    <a href="#MainForm" onclick="editForm(${i})" data-bs-toggle="modal" data-bs-target="#ModalForm"> <span class="bi-pencil-square text-info"></span></a>  </td>
+                    
+                  
+                  <td> ${plans[i]._id} </td>
+                  <td> ${plans[i].txt_name} </td>
+                  <td> ${plans[i].mile} </td>
+                  <td> ${plans[i].hundred} </td>
+                  <td> ${plans[i].maxDL} </td>
+                  <td> ${plans[i].pushups} </td>
+                  <td> ${plans[i].timeline} </td>
+                  <td> ${plans[i].caloricGoal} </td>
+                </tr>`;
+              }
+              out+= `</tbody>
+            </table>`;
+            
+            document.getElementById('rest').innerHTML = out;
+          }
+          
+          getPlans();
+
+          function insertForm()
+          {
+            document.getElementById("div_form_id").style = 'display:none;';
+            document.getElementById("_id").value = '';
+            document.getElementById("txt_name").value = '';
+            document.getElementById("mile").value = '';
+            document.getElementById("hundred").value = '';
+            document.getElementById("maxDL").value = '';
+            document.getElementById("pushups").value = '';
+            document.getElementById("timeline").value = '';
+            document.getElementById("caloricGoal").value = '';
+            document.getElementById("clear_button").style = 'display:flex;';
+          }
+    function editForm(pos)
+    {
+       document.getElementById("div_form_id").style = 'display:flex;';
+       document.getElementById("_id").value = plans[pos]._id;
+       document.getElementById("txt_name").value = plans[pos].txt_name;
+       document.getElementById("mile").value = plans[pos].mile;
+       document.getElementById("hundred").value = plans[pos].hundred;
+       document.getElementById("maxDL").value = plans[pos].maxDL;
+       document.getElementById("pushups").value = plans[pos].pushups;
+       document.getElementById("timeline").value = plans[pos].timeline;
+       document.getElementById("caloricGoal").value = plans[pos].caloricGoal;
+       document.getElementById("clear_button").style = 'display:none;';  
+    }
+        </script>
+    
+
+    <script>
+        const readMoreBn = document.querySelector('.readMoreButton');
+        const text = document.querySelector('.text');
+
+        readMoreBn.addEventListener('click', (e)=>
+        {
+            text.classList.toggle('show-more');
+            if(readMoreBn.innerText==='Read More')
+            {
+                readMoreBn.innerText = "Read Less";
+            }
+            else
+            {
+                readMoreBn.innerText = "Read More";
+            }
+        })
+    </script>
+
+</body>
+</html>
